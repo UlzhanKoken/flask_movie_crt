@@ -1,0 +1,12 @@
+{%extends "layout.html"%}
+{%block content%}
+  <h1><a href="/cinema/{{theatre.id}}">{{theatre}}</a></h1>
+  <table class="table ">
+    {%for movie in movies%}
+    <tr>
+      <td><a href="/movies/?name={{movie.name}}">{{movie.name}}</a></td>
+      <td>{{movie.time}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+{%endblock%}

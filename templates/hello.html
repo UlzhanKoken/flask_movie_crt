@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+{%block content%}
+  {%for theatre, movies in theatres.items()%}
+   <h1><a href="/cinema/{{theatre.id}}">{{theatre}}</a></h1>
+  <table class="table  table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+      <th>Название фильма</th>
+      <th>время показа</th>
+      </tr>
+    </thead>
+    {%for movie in movies%}
+    <tr>
+      <td>{{movie.name}}</td>
+      <td>{{movie.time}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+  {%endfor%}
+{%endblock%}
+

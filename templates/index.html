@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+{%block content%}
+<html>
+   {%for movie in movies%}
+  <table>
+   
+      <tr>
+        <td>{{movie.theatre}}</td>
+        <td>{{movie.name}}</td>
+        <td>{{movie.time}}</td>
+      </tr>
+    
+  </table>
+  {%endfor%}
+</html>
+{%endblock%}
